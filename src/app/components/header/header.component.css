@@ -1,0 +1,27 @@
+img {
+    height: 2rem;
+}
+
+.header {
+    height: 8%; /* Mantenha a altura desejada */
+    background-color: rgb(13, 210, 187);
+    justify-content: center;
+    position: fixed; /* Torna o header fixo */
+    top: 0; /* Posiciona o header no topo da página */
+    width: 100%; /* Faz com que o header ocupe toda a largura da página */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+span {
+    display: flex;
+    color: rgb(0, 0, 0);
+    padding: 50px;
+}
+
+.header h1 {
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    color: #2c0d9c; /* Cor do texto (opcional) */
+    margin: 0; /* Remove margens padrão */
+    padding: 10px; /* Adiciona espaçamento interno, se desejado */
+    
+}

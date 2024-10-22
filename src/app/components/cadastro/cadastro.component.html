@@ -1,0 +1,63 @@
+<form>
+    <h1>Cadastro de Alunos</h1>
+    <div class="dados">
+
+        <!-- Nome Completo -->
+        <mat-form-field class="nomeAluno">
+            <mat-label>Nome Completo</mat-label>
+            <input matInput size="60" [(ngModel)]="aluno.nome" name="aluno.nome" placeholder="Ex. Marcos Monteiro" required>
+        </mat-form-field>
+
+        <!-- RA (Registro Acadêmico) -->
+        <mat-form-field class="raAluno">
+            <mat-label>RA</mat-label>
+            <input matInput size="20" [(ngModel)]="aluno.ra" name="aluno.ra" placeholder="Ex. 123456789">
+        </mat-form-field>
+
+        <!-- CEP -->
+        <mat-form-field class="cepAluno">
+            <mat-label>CEP</mat-label>
+            <input matInput size="10" [(ngModel)]="aluno.cep" name="aluno.cep" placeholder="Ex. 12345-678" required>
+        </mat-form-field>
+
+        <!-- Número -->
+        <mat-form-field class="numeroAluno">
+            <mat-label>Número</mat-label>
+            <input matInput type="number" [(ngModel)]="aluno.numero" name="aluno.numero" placeholder="Ex. 123" required>
+        </mat-form-field>
+
+        <!-- Complemento -->
+        <mat-form-field class="complementoAluno">
+            <mat-label>Complemento</mat-label>
+            <input matInput size="60" [(ngModel)]="aluno.complemento" name="aluno.complemento" placeholder="Ex. Apto 101">
+        </mat-form-field>
+
+        <!-- Nota ADO 1 -->
+        <mat-form-field class="notaAdo1Aluno">
+            <mat-label>Nota ADO 1</mat-label>
+            <input matInput type="number" [(ngModel)]="aluno.notaAdo1" name="aluno.notaAdo1" placeholder="Ex. 9.5" required>
+        </mat-form-field>
+
+        <!-- Nota PI -->
+        <mat-form-field class="notaPIAluno">
+            <mat-label>Nota PI</mat-label>
+            <input matInput type="number" [(ngModel)]="aluno.notaPI" name="aluno.notaPI" placeholder="Ex. 8.0" required>
+        </mat-form-field>
+
+        <!-- Situação do Aluno -->
+        <mat-form-field class="situacao">
+            <mat-label>Situação do Aluno</mat-label>
+            <select matNativeControl required [(ngModel)]="aluno.ativo" name="aluno.ativo">
+                <option [value]="true">Ativo</option>
+                <option [value]="false">Inativo</option>
+            </select>
+        </mat-form-field>
+
+    </div>
+
+    <div class="botoes">
+        <button (click)="cadastrar()" mat-raised-button color="primary" name="botaoCadastrar">Gravar</button>
+        <button (click)="cancelar()" mat-raised-button color="warn" name="botaoCancelar">Cancelar</button>
+    </div>
+
+</form>

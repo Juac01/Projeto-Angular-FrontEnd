@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="badge">
+        <button (click)="verAtivos()" mat-raised-button color="warn">
+            Retornar
+        </button>
+    </div>
+
+    <div class="badge-inativos">
+        <button mat-raised-button color="warn" matBadge="{{inativo}}">
+            Alunos Inativos
+        </button>
+    </div>
+
+
+    <div class="conteudo" *ngFor="let item of inativos">
+        <mat-card class="card mat-elevation-z3">
+            <mat-card-header>
+                <mat-card-title class="nome">Nome: {{item.nome}}</mat-card-title>
+                <mat-card-subtitle class="sub">CEP: {{item.cep}}</mat-card-subtitle>
+                <mat-card-subtitle class="sub">Número: {{item.numero}}</mat-card-subtitle>
+                <mat-card-subtitle class="sub">Complemento: {{item.complemento}}</mat-card-subtitle>
+                <mat-card-subtitle class="sub">Nota ADO#01: {{item.notaAdo1}}</mat-card-subtitle>
+                <mat-card-subtitle>Nota PI: {{item.notaPI}}</mat-card-subtitle>
+                <mat-card-subtitle>Ativo: {{item.ativo}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <div class="acoes">
+                <button (click)="ativar(item)" class="gravar" mat-mini-fab color="primary" id="gravar">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button class="editar" mat-mini-fab color="accent" id="editar">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button (click)="apagar(item.id)" class="apagar" mat-mini-fab color="warn" id="apagar">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+    </div>
+
+</div>

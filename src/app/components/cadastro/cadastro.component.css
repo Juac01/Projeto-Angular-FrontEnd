@@ -1,0 +1,40 @@
+form {
+    width: 90%;
+    margin-left: 50px;
+    min-width: 500px;
+    max-width: 90%;
+    width: 100%;
+    background-color: rgb(221, 239, 222);
+}
+
+.nomeAluno {
+    width: 90%;
+    font-size: 22px;
+}
+
+.dataCadastro,
+.nomeAluno,
+.situacao,
+form,
+h1 {
+    margin: 0.8%;
+}
+
+h1 {
+    font-size: 32px;
+    color: blue;
+    text-align: left;
+    font-weight: 600;
+    padding: 0.8%;
+}
+
+.dataCadastro {
+    font: blue;
+    margin-top: 0.5rem;
+}
+
+.botoes {
+    align-items: flex-start;
+    text-align: right;
+    padding: 1rem;
+}
